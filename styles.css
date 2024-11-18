@@ -1,0 +1,247 @@
+/* Reset de estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos generales */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+    color: #333;
+  }
+  
+  /* Estilo para la barra de navegación */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #121212; /* Fondo oscuro */
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: top 0.3s ease-in-out;
+  }
+  
+  /* Estilo para el logo (circular) */
+  #logo {
+    width: 50px; /* Tamaño de 100px de ancho */
+    height: 50px; /* Altura igual a la anchura para hacer el logo circular */
+    border-radius: 50%; /* Hace el logo circular */
+    object-fit: cover; /* Ajusta la imagen dentro del círculo */
+    transition: transform 0.3s ease-in-out; /* Efecto de transición suave */
+  }
+  
+  /* Efecto de hover para el logo */
+  #logo:hover {
+    transform: scale(1.1); /* Aumenta el tamaño ligeramente al hacer hover */
+  }
+  
+  /* Estilo para los enlaces de navegación */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #FAFAFA; /* Color blanco */
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    transition: color 0.3s ease-in-out; /* Transición suave para el color */
+  }
+  
+  .nav-links li a:hover {
+    color: #ec4d58; /* Rojo coral al hacer hover */
+  }
+
+  /* Estilo de la imagen Hero */
+  .hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding-top: 80px; /* Para no sobreponer el contenido con la barra */
+    overflow: hidden;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s ease-out;
+  }
+  
+  .hero-image:hover {
+    transform: scale(1.05); /* Efecto sutil al hacer hover */
+  }
+  
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
+  }
+  
+  .hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.5em;
+  }
+  
+/* Contenedor del hero */
+.hero-container {
+    position: relative;
+    background-image: url('images/badminton_court.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 600px; /* Ajusta la altura del hero */
+  }
+  
+  /* Estilo para los textos dentro del hero */
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #FAFAFA; /* Color blanco para el texto */
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.7rem; /* Tamaño grande del texto */
+    font-weight: 700;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Sombra suave para dar contraste */
+    line-height: 1.2; /* Espaciado entre líneas */
+  }
+  
+  /* Estilo para el subtítulo del hero */
+  .hero-subtext {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #FAFAFA; /* Color blanco */
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Sombra para el subtítulo */
+    line-height: 1.4; /* Espaciado entre líneas */
+  }
+  
+
+  /* Estilos de los productos */
+  #products {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+  }
+  
+  .product-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .product-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+  }
+  
+  .product-card img:hover {
+    transform: scale(1.1); /* Efecto sutil al hacer hover */
+  }
+  
+  .product-card h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+  }
+  
+  .product-card p {
+    font-size: 1em;
+    margin-bottom: 15px;
+  }
+  
+  .product-card button {
+    background-color: #1e7e34;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+  }
+  
+  .product-card button:hover {
+    background-color: #155d27;
+  }
+  
+  /* Estilos del Modal del Carrito de Compras */
+  #shopping-cart-modal .cart-background {
+    background: url('images/cart_background.png') no-repeat center center;
+    background-size: cover;
+    padding: 80px 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  #shopping-cart-modal .cart-content {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  #shopping-cart-modal h2 {
+    color: #1e7e34;
+  }
+  
+  #shopping-cart-modal button {
+    background-color: #1e7e34;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+  }
+  
+  #shopping-cart-modal button:hover {
+    background-color: #155d27;
+  }
+  
+  /* Pie de página */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e7e34;
+    color: white;
+  }
+  
